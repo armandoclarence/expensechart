@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="assets/images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | Expenses chart component</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<link
+			rel="stylesheet"
+			href="style.css"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<main>
+				<article>
+					<div class="balance">
+						<div>
+							My balance
+							<h2>$921.48</h2>
+						</div>
+						<img
+							src="assets/images/logo.svg"
+							alt="logo"
+						/>
+					</div>
+				</article>
+				<article>
+					<div class="summary">
+						<h2>Spending - Last 7 days</h2>
+						<canvas
+							id="my-chart"
+							width="70vw"
+							height="40vh"
+							max-width="400"
+						></canvas>
+						<hr />
+						<div class="spend">
+							<div>
+								Total this month
+								<h1>$478.33</h1>
+							</div>
+							<div>
+								<p>+2.4%</p>
+								from last month
+							</div>
+						</div>
+					</div>
+				</article>
+			</main>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+		<script src="script.js"></script>
+	</body>
+</html>

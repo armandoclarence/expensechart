@@ -1,0 +1,104 @@
+:root {
+	--softRed: hsl(10, 79%, 65%);
+	--cyan: hsl(186, 34%, 60%);
+	--darkBrown: hsl(25, 47%, 15%);
+	--mediumBrown: hsl(28, 10%, 53%);
+	--cream: hsl(27, 66%, 92%);
+	--veryPaleRange: hsl(33, 100%, 98%);
+	--fontSize: 18px;
+}
+
+@font-face {
+	font-family: "DM Sans";
+	src: url(assets/font/DMSans.ttf);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--cream);
+	font-family: "DM Sans";
+	color: var(--darkBrown);
+	font-size: var(--fontSize);
+}
+
+h1 {
+	font-size: 2em;
+}
+
+.container {
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	bottom: 25%;
+	right: 25%;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+article .balance {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	color: var(--veryPaleRange);
+	background: var(--softRed);
+	border-radius: 1em;
+	padding: 1em;
+}
+
+.balance img {
+	margin-left: auto;
+	width: auto;
+}
+
+article .summary {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	background: var(--veryPaleRange);
+	border-radius: 1em;
+	padding: 2em;
+	gap: 0.5em;
+}
+
+.summary hr {
+	width: 100%;
+	height: 3px;
+	border: 2px solid var(--cream);
+}
+
+.summary .spend {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	color: var(--mediumBrown);
+}
+
+.spend :is(h1, p) {
+	color: var(--darkBrown);
+	font-weight: bold;
+}
+
+.spend :nth-of-type(2) {
+	text-align: right;
+	justify-self: flex-end;
+	align-self: flex-end;
+}
+.spend :nth-of-type(2) p {
+	margin: 0;
+}
+
+@media screen and (max-width: 750px) {
+	.container {
+		left: 1em;
+		right: 1em;
+	}
+	article .summary {
+		gap: 0;
+	}
+}
